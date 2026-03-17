@@ -1,0 +1,28 @@
+### Cadastrar o primeiro jogador
+POST http://localhost:8080/api/players
+Content-Type: application/json
+
+{
+  "groupId": "PELADA-DOMINGO",
+  "name": "",
+  "age": 10,
+  "position": "MEIA",
+  "isPresent": true
+}
+
+
+### Cadastrar o craque do time
+POST http://localhost:8080/api/players
+Content-Type: application/json
+
+{
+  "groupId": "PELADA-DOMINGO",
+  "name": "Tiquinho Soares",
+  "age": 33,
+  "position": "ATACANTE",
+  "isPresent": true
+}
+
+
+### Listar todos os jogadores do nosso grupo
+GET http://localhost:8080/api/players/PELADA-DOMINGO
