@@ -1,0 +1,15 @@
+services:
+  postgres-db:
+    image: postgres:16-alpine
+    container_name: team-draft-db
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: adminpassword
+      POSTGRES_DB: team_draft_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
