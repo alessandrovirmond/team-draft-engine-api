@@ -1,3 +1,8 @@
+
+### Listar todos os jogadores do nosso grupo
+GET http://localhost:8080/api/players/PELADA-DOMINGO
+
+
 ### Cadastrar o primeiro jogador
 POST http://localhost:8080/api/players
 Content-Type: application/json
@@ -24,5 +29,18 @@ Content-Type: application/json
 }
 
 
-### Listar todos os jogadores do nosso grupo
-GET http://localhost:8080/api/players/PELADA-DOMINGO
+### Atualizar os dados de um jogador
+PUT http://localhost:8080/api/players/1fac7a59-c23a-47a1-8dd6-5a5792e82968
+Content-Type: application/json
+
+{
+  "groupId": "PELADA-DOMINGO",
+  "name": "Leonir Gay",
+  "age": 29,
+  "position": "MEIA",
+  "isPresent": false
+}
+
+### Deletar um jogador (O craque machucou)
+DELETE http://localhost:8080/api/players/49d2347e-4973-49e0-9863-1eb1280bf893
+
