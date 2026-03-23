@@ -44,3 +44,71 @@ Content-Type: application/json
 ### Deletar um jogador (O craque machucou)
 DELETE http://localhost:8080/api/players/49d2347e-4973-49e0-9863-1eb1280bf893
 
+### ==========================================
+### MASSA DE DADOS: PELADA-DOMINGO (10 Jogadores)
+### ==========================================
+
+### 1. Goleiro 1
+POST http://localhost:8080/api/players
+Content-Type: application/json
+
+{ "groupId": "PELADA-DOMINGO", "name": "Marcos (Goleiro)", "age": 35, "position": "GOLEIRO", "isPresent": true }
+
+### 2. Goleiro 2
+POST http://localhost:8080/api/players
+Content-Type: application/json
+
+{ "groupId": "PELADA-DOMINGO", "name": "Dida (Goleiro)", "age": 42, "position": "GOLEIRO", "isPresent": true }
+
+### 3. Zagueiro Velho 1
+POST http://localhost:8080/api/players
+Content-Type: application/json
+
+{ "groupId": "PELADA-DOMINGO", "name": "Aldair (Zagueiro)", "age": 48, "position": "ZAGUEIRO", "isPresent": true }
+
+### 4. Zagueiro Velho 2
+POST http://localhost:8080/api/players
+Content-Type: application/json
+
+{ "groupId": "PELADA-DOMINGO", "name": "Juan (Zagueiro)", "age": 45, "position": "ZAGUEIRO", "isPresent": true }
+
+### 5. Meia Experiente
+POST http://localhost:8080/api/players
+Content-Type: application/json
+
+{ "groupId": "PELADA-DOMINGO", "name": "Alex (Meia)", "age": 38, "position": "MEIA", "isPresent": true }
+
+### 6. Meia Novo
+POST http://localhost:8080/api/players
+Content-Type: application/json
+
+{ "groupId": "PELADA-DOMINGO", "name": "Paquetá (Meia)", "age": 26, "position": "MEIA", "isPresent": true }
+
+### 7. Atacante Novo 1
+POST http://localhost:8080/api/players
+Content-Type: application/json
+
+{ "groupId": "PELADA-DOMINGO", "name": "Endrick (Atacante)", "age": 17, "position": "ATACANTE", "isPresent": true }
+
+### 8. Atacante Novo 2
+POST http://localhost:8080/api/players
+Content-Type: application/json
+
+{ "groupId": "PELADA-DOMINGO", "name": "Vini Jr (Atacante)", "age": 23, "position": "ATACANTE", "isPresent": true }
+
+### 9. Zagueiro Novo (Para balancear)
+POST http://localhost:8080/api/players
+Content-Type: application/json
+
+{ "groupId": "PELADA-DOMINGO", "name": "Marquinhos (Zagueiro)", "age": 29, "position": "ZAGUEIRO", "isPresent": true }
+
+### 10. Atacante Experiente
+POST http://localhost:8080/api/players
+Content-Type: application/json
+
+{ "groupId": "PELADA-DOMINGO", "name": "Romário (Atacante)", "age": 55, "position": "ATACANTE", "isPresent": true }
+
+### ==========================================
+### SORTEAR OS TIMES
+### ==========================================
+GET http://localhost:8080/api/draft/PELADA-DOMINGO?numberOfTeams=2
