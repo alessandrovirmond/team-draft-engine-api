@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 import java.util.*;
 import java.util.stream.Collectors;
 
-@Component // Transforma essa estratégia em um "feijão" (Bean) que o Spring vai gerenciar
+@Component
 public class AgeAndPositionDraftStrategy implements TeamDraftStrategy {
 
     @Override
