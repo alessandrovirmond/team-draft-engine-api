@@ -7,6 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.UUID;
 
 @RestController
 @RequestMapping("/api/draft")
@@ -15,12 +16,12 @@ public class DraftController {
 
     private final DraftService draftService;
 
-    @GetMapping("/{groupId}")
-    public ResponseEntity<List<TeamDTO>> draftTeams(
+    @PostMapping("/{groupId}/auto")
+    public ResponseEntity<List<TeamDTO>> draftTeamsAuto(
             @PathVariable String groupId,
-            @RequestParam(defaultValue = "2") int numberOfTeams) {
+            @RequestBody List<UUID> presentPlayerIds) {
         
-        List<TeamDTO> teams = draftService.generateTeams(groupId, numberOfTeams);
+        List<TeamDTO> teams = draftService.generateTeamsAuto(groupId, presentPlayerIds);
         return ResponseEntity.ok(teams);
     }
 }
